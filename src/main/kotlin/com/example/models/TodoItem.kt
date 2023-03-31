@@ -3,7 +3,7 @@ package com.example.models
 import org.jetbrains.exposed.sql.*
 
 
-data class TodoItem(val id: Int, val text: String, val isDone: Boolean)
+data class TodoItem(val id: Int, var text: String, val isDone: Boolean)
 
 object TodoList : Table() {
     val id = integer("id").autoIncrement()
